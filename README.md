@@ -100,4 +100,27 @@ python lbp8.py [options] target_file
 - **File not found:** Check the `target_file` path.
 - **Invalid instruction or operand:** Ensure your program uses valid LBP-8 mnemonics and addressing modes.
 - **Program too long:** Maximum program size is 256 bytes.
+
+## Example Program
+
+This program detects a change in the input value, then outputs the new value multiplied by 2.
+
+```asm
+lda #0 ; Reset the accumulator
+
+loop:
+in ; Read the input
+sub %i ; Subtract input from the accumulator
+jz same ; Check if it is different
+
+lda %i ; Update the accumulator
+add %i ; Add the value to itself, to multiply it by 2
+out %a ; Display the value
+lda %i ; Restore the original value
+jmp loop
+
+same:
+lda %i ; Restore the original value
+jmp loop
+```
   
