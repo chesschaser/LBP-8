@@ -5,6 +5,8 @@
 The LBP-8 is an 8-bit CPU built in LittleBigPlanet 3. It has a simple
 ALU, 256B RAM, and supports 4 addressing modes.
 
+Video here: https://www.youtube.com/watch?v=lUfbFv00244
+
 ## Components
 
 
