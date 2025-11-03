@@ -24,10 +24,10 @@ ALU, 256B RAM, and supports 4 addressing modes.
 <em>Inside the logic block microchip. This is part of the ALU, and performs logical operations like AND and OR.</em>
 
 <img src="display.jpg" alt="LBP-8 Display" width="800" height="900">
-<em>The display consists of two 7-segment displays and an 8x8 dot matrix. The 7-segment displays show the byte in the output register in hexadecimal format. The dot matrix allows for simple, monochrome (red on black) pixel art.</em>
+<em>The CPU's display. This consists of two 7-segment displays and an 8x8 dot matrix. The 7-segment displays show the byte in the output register in hexadecimal format. The dot matrix allows for simple, monochrome (red on black) pixel art.</em>
 
 <img src="programmer_terminal.jpg" alt="LBP-8 Programmer Terminal" width="800" height="900">
-<em>This is designed to work with the programmer device. Before running the assembler, use the Controllinator. This allows the uploader tool to interface with the game via PS Remote Play, and type in a program.</em>
+<em>The programmer terminal. This is designed to work with the programmer device. Before running the assembler, use the Controllinator. This allows the uploader tool to control the terminal in the game via PS Remote Play, and automatically upload a program.</em>
 
 ## Registers
 
