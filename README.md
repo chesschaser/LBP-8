@@ -73,8 +73,8 @@ Note: When uploading a program, ensure you are using the Controllinator on the i
 - A connected LBP-8 programmer
 - PS Remote Play
 
-<img src="programmer.jpg" alt="LBP-8 Programmer" width="400" height="400">
-*LBP-8 Programmer*
+<img src="programmer.jpg" alt="LBP-8 Programmer" width="400" height="500">
+<em>LBP-8 Programmer. The Raspberry Pi Pico emulates a DualShock 4 for PS Remote Play, and the Arduino Nano receives the button sequence from the assembler.</em>
 
 ### Command-Line Usage
 
