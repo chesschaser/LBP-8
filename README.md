@@ -57,3 +57,44 @@ Note: STA is only valid in direct or register pointer mode.
 
 Note: The subsequent instruction after a jump is not loaded reliably. The assembler automatically inserts an IN instruction before the main block to be
 executed after a jump to work around this issue.
+
+## Using the Assembler
+
+This tool allows you to compile and assemble programs for the LBP-8 CPU and upload them via a connected programmer. The assembler supports both direct assembly files and higher-level programs that require compilation first. The compiler is very rough, and at this time I do not recommend using it.
+
+Note: When uploading a program, ensure you are using the Controllinator on the in-game programmer terminal. You will also need an active PS Remote Play connection.
+
+### Prerequisites
+
+- Python 3.8+
+- pyserial library (pip install pyserial)
+- tqdm library for progress bars (pip install tqdm)
+- colorama for colored terminal output (pip install colorama)
+- A connected LBP-8 programmer
+- PS Remote Play
+
+### Command-Line Usage
+
+```bash
+python lbp8.py [options] target_file
+```
+
+### Arguments
+
+- `target_file` - Path to the program file you want to assemble or compile.
+   
+### Options
+
+| Option           | Description                                                                                                                     |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| `-a, --assembly` | Skip compilation and directly assemble the file contents. Use this if the target file is already in assembly.                   |
+| `-c, --compile`  | Compile the target file first before assembling. Use this if the file contains higher-level instructions (LET, DIM, PRINT, etc.). VERY ROUGH! |
+| `-v, --verbose`  | Enable verbose output. Prints the generated assembly, binary, and programmer button sequence for debugging or inspection.                     |
+
+### Troubleshooting
+
+- **Programmer not detected:** Ensure the device is connected and recognized by your system. The tool will scan available serial ports automatically.
+- **File not found:** Check the `target_file` path.
+- **Invalid instruction or operand:** Ensure your program uses valid LBP-8 mnemonics and addressing modes.
+- **Program too long:** Maximum program size is 256 bytes.
+  
