@@ -19,7 +19,7 @@ ALU, 256B RAM, and supports 4 addressing modes.
 | Flag | Description                                                   |
 |------|---------------------------------------------------------------|
 | Z    | Set if the accumulator is zero.                               |
-| C    | Set if the last arithmetic operation resulted in a value to large to be represented; cleared otherwise. |
+| C    | Set if the last arithmetic operation resulted in a value too large to be represented; cleared otherwise. |
 
 ### Addressing Modes
 
@@ -31,7 +31,7 @@ ALU, 256B RAM, and supports 4 addressing modes.
 | Register pointer  | $register    | Operand is at the address stored in the specified register (e.g. LDA $I) |
 
 
-Note: STA is only valid in direct or register pointer mode.
+> **Note:** STA is only valid in direct or register pointer mode.
 
 ### Instruction Set
 
@@ -55,14 +55,14 @@ Note: STA is only valid in direct or register pointer mode.
 | HLT      | Stop execution                     | N/A                             | N/A            |
 
 
-Note: The subsequent instruction after a jump is not loaded reliably. The assembler automatically inserts an IN instruction before the main block to be
+> **Note:** The subsequent instruction after a jump is not loaded reliably. The assembler automatically inserts an IN instruction before the main block to be
 executed after a jump to work around this issue.
 
 ## Using the Assembler
 
 This tool allows you to compile and assemble programs for the LBP-8 CPU and upload them via a connected programmer. The assembler supports both direct assembly files and higher-level programs that require compilation first. The compiler is very rough, and at this time I do not recommend using it.
 
-Note: When uploading a program, ensure you are using the Controllinator on the in-game programmer terminal. You will also need an active PS Remote Play connection.
+> **Note:** When uploading a program, ensure you are using the Controllinator on the in-game programmer terminal. You will also need an active PS Remote Play connection.
 
 ### Prerequisites
 
