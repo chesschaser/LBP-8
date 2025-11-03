@@ -5,7 +5,31 @@
 The LBP-8 is an 8-bit CPU built in LittleBigPlanet 3. It has a simple
 ALU, 256B RAM, and supports 4 addressing modes.
 
-### Registers
+## Components
+
+
+<img src="cpu.jpg" alt="LBP-8 CPU" width="800" height="900">
+<em>Main microchip.</em>
+
+<img src="control_module.jpg" alt="LBP-8 Control Module" width="800" height="900">
+<em>Inside the control module microchip. This fetches binary instructions from memory, and sends them to the computation module.</em>
+
+<img src="computation_module.jpg" alt="LBP-8 Computation Module" width="800" height="900">
+<em>Inside the computation module microchip. This is the "brain" of the CPU, and is responsible for actually executing the instructions provided to it by the control module.</em>
+
+<img src="alu.jpg" alt="LBP-8 ALU" width="800" height="900">
+<em>Inside the ALU microchip. This performs arithmetic and logical operations.</em>
+
+<img src="logic_block.jpg" alt="LBP-8 Logic Block" width="800" height="900">
+<em>Inside the logic block microchip. This is part of the ALU, and performs logical operations like AND and OR.</em>
+
+<img src="display.jpg" alt="LBP-8 Display" width="800" height="900">
+<em>The display consists of two 7-segment displays and an 8x8 dot matrix. The 7-segment displays show the byte in the output register in hexadecimal format. The dot matrix allows for simple, monochrome (red on black) pixel art.</em>
+
+<img src="programmer_terminal.jpg" alt="LBP-8 Programmer Terminal" width="800" height="900">
+<em>This is designed to work with the programmer device. Before running the assembler, use the Controllinator. This allows the uploader tool to interface with the game via PS Remote Play, and type in a program.</em>
+
+## Registers
 
 | Register | Description                                           |
 |----------|-------------------------------------------------------|
@@ -14,14 +38,14 @@ ALU, 256B RAM, and supports 4 addressing modes.
 | I        | Input register. Stores data from the input bus.      |
 | O        | Output register. Sends data to an external system.  |
 
-### Flags
+## Flags
 
 | Flag | Description                                                   |
 |------|---------------------------------------------------------------|
 | Z    | Set if the accumulator is zero.                               |
 | C    | Set if the last arithmetic operation resulted in a value too large to be represented; cleared otherwise. |
 
-### Addressing Modes
+## Addressing Modes
 
 | Mode              | Syntax       | Description                                           |
 |------------------ |------------- |------------------------------------------------------|
@@ -33,7 +57,7 @@ ALU, 256B RAM, and supports 4 addressing modes.
 
 > **Note:** STA is only valid in direct or register pointer mode.
 
-### Instruction Set
+## Instruction Set
 
 | Mnemonic | Description                       | Valid Modes                     | Flags Affected |
 |----------|-----------------------------------|---------------------------------|----------------|
