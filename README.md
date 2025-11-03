@@ -73,7 +73,7 @@ Note: When uploading a program, ensure you are using the Controllinator on the i
 - A connected LBP-8 programmer
 - PS Remote Play
 
-![LBP-8 Programmer](programmer.jpg)
+<img src="programmer.jpg" alt="LBP-8 Programmer" width="400" height="300">
 *LBP-8 Programmer*
 
 ### Command-Line Usage
